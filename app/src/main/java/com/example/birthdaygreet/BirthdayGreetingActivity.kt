@@ -1,6 +1,7 @@
 package com.example.birthdaygreet
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -22,6 +23,11 @@ class BirthdayGreetingActivity : AppCompatActivity() {
 //            insets
 //        }
 
+        // Find the TextView with the id 'BirthdayGreeting'
+        val birthdayGreetingTextView = findViewById<TextView>(R.id.BirthdayGreeting)
+
         val name = intent.getStringExtra(NAME_EXTRA)
+        birthdayGreetingTextView.text = "Happy Birthday $name"
+
     }
 }
